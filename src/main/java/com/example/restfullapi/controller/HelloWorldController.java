@@ -13,12 +13,14 @@ public class HelloWorldController {
     // http://localhost:8082/hello-world
     @GetMapping(Mappings.HELLO_WORLD)
     public String helloWorld() {
+
         return "Hello world";
     }
 
     // http://localhost:8082/hello-world-bean
     @GetMapping(Mappings.HELLO_WORLD_BEAN)
     public HelloWorldBean helloWorldBean() {
+
         return new HelloWorldBean("Hello world");
     }
 
