@@ -13,7 +13,7 @@ public class HelloWorldBean {
     private String message;
 
     // == constructors ==
-    public HelloWorldBean(String message) {
+    public   HelloWorldBean(String message) {
         this.message = message;
 
     }

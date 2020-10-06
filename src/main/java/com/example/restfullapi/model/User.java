@@ -1,6 +1,8 @@
 package com.example.restfullapi.model;
 
 
+import io.swagger.annotations.ApiModel;
+import io.swagger.annotations.ApiModelProperty;
 import lombok.Getter;
 import lombok.Setter;
 import lombok.ToString;
@@ -13,7 +15,8 @@ import java.util.Date;
 @Getter
 @Setter
 @ToString
-public class User {
+@ApiModel(description = "All detail about user.")
+public class User    {
 
     // == constructors ==
     public User(Integer id, String name, Date brithday) {
@@ -29,7 +32,9 @@ public class User {
     @Positive
     private Integer id;
     @Size(min = 2)
+    @ApiModelProperty(notes = "Name should have atleast 2 words")
     private String name;
     @Past
+    @ApiModelProperty(notes = "Birth date should bi in the past")
     private Date brithday;
 }

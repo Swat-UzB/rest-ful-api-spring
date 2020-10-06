@@ -18,7 +18,6 @@ import java.util.Date;
 public class DefaultResponseEntityExceptionHandler extends ResponseEntityExceptionHandler {
 
 
-
     @ExceptionHandler(Exception.class)
     public final ResponseEntity<Object> handleAllExceptions(Exception ex, WebRequest request) throws Exception {
 
