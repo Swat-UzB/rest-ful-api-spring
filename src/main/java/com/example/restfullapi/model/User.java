@@ -16,6 +16,8 @@ import java.util.Date;
 @Setter
 @ToString
 @ApiModel(description = "All detail about user.")
+//@JsonIgnoreProperties(value = "brithday")
+//@JsonFilter("UserFilter")
 public class User    {
 
     // == constructors ==
@@ -30,6 +32,7 @@ public class User    {
 
     // == fields ==
     @Positive
+//    @JsonIgnore
     private Integer id;
     @Size(min = 2)
     @ApiModelProperty(notes = "Name should have atleast 2 words")

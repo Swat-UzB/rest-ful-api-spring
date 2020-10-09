@@ -7,6 +7,7 @@ public class Mappings {
     public static final String HELLO_WORLD_BEAN = "hello-world-bean";
     public static final String HELLO_WORLD_BEAN_PATH_VRIABLE = "hello-world/path-variable/{name}";
     public static final String USERS = "users";
+    public static final String USERS_PARAM = "users/param";
     public static final String USERS_ID = "users/{id}";
 
     // == constructor ==
