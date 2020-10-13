@@ -7,10 +7,15 @@ import lombok.Getter;
 import lombok.Setter;
 import lombok.ToString;
 
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.Id;
+import javax.persistence.OneToMany;
 import javax.validation.constraints.Past;
 import javax.validation.constraints.Positive;
 import javax.validation.constraints.Size;
 import java.util.Date;
+import java.util.List;
 
 @Getter
 @Setter
@@ -18,7 +23,8 @@ import java.util.Date;
 @ApiModel(description = "All detail about user.")
 //@JsonIgnoreProperties(value = "brithday")
 //@JsonFilter("UserFilter")
-public class User    {
+@Entity
+public class User {
 
     // == constructors ==
     public User(Integer id, String name, Date brithday) {
@@ -31,6 +37,8 @@ public class User    {
     }
 
     // == fields ==
+    @Id
+    @GeneratedValue
     @Positive
 //    @JsonIgnore
     private Integer id;
@@ -40,4 +48,9 @@ public class User    {
     @Past
     @ApiModelProperty(notes = "Birth date should bi in the past")
     private Date brithday;
+
+    @OneToMany(mappedBy = "user")
+    private List<Post> posts;
+
+
 }

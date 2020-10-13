@@ -9,6 +9,8 @@ public class Mappings {
     public static final String USERS = "users";
     public static final String USERS_PARAM = "users/param";
     public static final String USERS_ID = "users/{id}";
+    public static final String USERS_ID_POSTS = "users/{id}/posts";
+    public static final String JPA = "jpa";
 
     // == constructor ==
     private Mappings() {
